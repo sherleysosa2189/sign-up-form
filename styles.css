@@ -112,6 +112,13 @@ body {
     cursor: pointer; 
 }
 
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid blue;
+}
 .form-columns {
     display: flex; 
     gap: 30px; 
@@ -179,5 +186,3 @@ body {
         width: 100%; /* Ensure inputs stretch across the screen */
     }
 }
-s
-    

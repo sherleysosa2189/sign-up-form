@@ -21,10 +21,10 @@
 
 <body>
     <div class="form-colum1">
-        <img class="image1" src="images/image1.jpg" alt="Big green leaves">
+        <img class="image1" src="/images/image1.jpg" alt="Big green leaves">
         <div class="photo-credit">Photo by Halie West on Unsplash</div>
         <div class="image-container">
-            <img class="image2" src="images/image2.png" alt="Odin project logo">
+            <img class="image2" src="/images/image2.png" alt="Odin project logo">
             <div class="photo-description">ODIN</div>
         </div>
 
@@ -33,7 +33,9 @@
     <div class="form-colum2">
         <div class="form-group1">
             <!-- <h1>Sig-Up Form</h1> -->
-            <p><em>This is not a real online service, but it is my first Sign up Form! This is small step to continue learning about web development. Sign-up forms are very important for the journey. Sign up now to see how much I
+            <p><em>This is not a real online service, but it is my first Sign up Form! This is small step to continue
+                    learning about web development. Sign-up forms are very important for the journey. Sign up now to see
+                    how much I
                     have
                     improved.</em></p>
         </div>
@@ -45,34 +47,45 @@
                 <div class="form-column">
                     <div class="form-group2">
                         <label for="first-name">FIRST NAME</label>
-                        <input id="first-name" name="first-name" type="text" required placeholder="Sherley" />
+                        <input id="first-name" name="first-name" type="text" required minlength="3" maxlength="50"
+                            pattern="[A-Za-z]+"  placeholder="Sherley">
+
                     </div>
 
                     <div class="form-group2">
                         <label for="email">EMAIL</label>
-                        <input id="email" name="email" type="email" required placeholder="sherley123@example.com" />
+                        <input id="email" name="email" type="email" required
+                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                            placeholder="sherley123@example.com">
+
                     </div>
 
                     <div class="form-group2">
                         <label for="password">PASSWORD</label>
-                        <input id="password" name="password" type="text" required />
+                        <input id="password" name="password" type="password" required
+                            pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+" placeholder="Your Password">
+
                     </div>
                 </div>
 
                 <div class="form-column">
                     <div class="form-group2">
                         <label for="last-name">LAST NAME</label>
-                        <input id="last-name" name="last-name" type="text" required placeholder="Sosa" />
+                        <input id="last-name" name="last-name" type="text" required minlength="3" maxlength="50"
+                            pattern="[A-Za-z]+" placeholder="Sosa" />
                     </div>
 
                     <div class="form-group2">
                         <label for="phone-number">PHONE NUMBER</label>
-                        <input id="phone-number" name="phone-number" type="text" required placeholder="555-555-5555" />
+                        <input id="phone-number" name="phone-number" type="tel" required pattern="\d{3}-\d{3}-\d{4}"
+                            placeholder="555-555-5555" title="Enter your phone number in the format 555-555-5555" />
                     </div>
 
                     <div class="form-group2">
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input id="confirm-password" name="confirm-password" type="text" required />
+                        <input id="confirm-password" name="confirm-password" type="password" required
+                            pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+" placeholder="Confirm Password">
+
                     </div>
                 </div>
             </div>
@@ -83,7 +96,7 @@
             <p> Already have an account? <span class="green-text">Log In</span></p>
         </div>
 
-        
+
 </body>
 
 </html>
