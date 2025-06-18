@@ -38,7 +38,11 @@ project-folder/
 └── screenshot.png
 
 
-##### Preview
+##### Link 
+https://sherleysosa2189.github.io/sign-up-form/
+
+
+###### Preview
 
 ![Sign-Up Form Desktop ViewPreview](/images/screenshot.png)  
 
