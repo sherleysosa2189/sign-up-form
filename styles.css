@@ -1,18 +1,34 @@
 body {
     font-family: 'Reddit Sans Condensed';
+    margin: 0;
 }
 
-/* Styling the format of the two images in the left side of the screen */
+/* Style the format of the two images in the left side of the screen */
 .form-colum1 {
     position: relative;
+    width: 30%;
+    height: 100%;
+    
 }
 
-/* Styling the backgound image to the left side */
+/* Style image2 and .photo-description */
+.image-container {
+    position: relative;
+    top: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    gap: 30px;
+}  
+
+/* Style the backgound image to the left side */
 .image1 {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
-    width: auto;
+    width: 100%;
     height: 100vh;
     object-fit: cover;
     z-index: 1;
@@ -22,27 +38,15 @@ body {
 .photo-credit {
     position: fixed;
     bottom: 10px;
-    left: 150px;
-    z-index: 2;
+    left: 10%;
+    transform: translate(-25%);
+    z-index: 2; 
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
     font-size: 0.9rem;
     font-family: 'Roboto';
-}
-
-/* Styling image2 and .photo-description */
-.image-container {
-    position: fixed;
-    top: 150px;
-    left: 80px;
-    width: 300px; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    align-items: center; 
-    justify-content:space-evenly; 
-    border-radius: 8px;
-    z-index: 3;
+    text-align: center;
 }
 
 .image2 {
@@ -55,26 +59,19 @@ body {
     font-size: 5rem;
 }
 
-/* Styling the right side of the form */
+/* Style the right side of the form */
 .form-colum2 {
   position: fixed;
   right: 0;
   top: 0;
   width: 55vw; 
   height: 100vh;
-  /* background-color: rgb(240, 213, 213);  */
   padding: 60px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  z-index: 5;
+  /* z-index: 5; */
 }
-
-/* .form-colum2 h1 {
-    color: rgb(5, 5, 20);
-    font-size: 3rem;
-    font-family: 'Roboto';
-} */
 
 .form-colum2 p {
     color: rgb(35, 6, 61);
@@ -87,38 +84,40 @@ body {
     font-family: 'Roboto';
 }
 
-/* Styling the form  */
+/* Style the form  */
 .form-group2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 5;
+    /* z-index: 5; */
     color: rgb(15, 8, 8);
     font-size: 1.2rem;
     padding: 10px;
     font-family: 'Roboto';
 }
 
-/* Styling te input fields */
+/* Style the input fields */
 .form-group2 input {
     width: 50%;
     height: 25px;
-    font-size: 1rem;
     border: 2px solid #E5E7EB;
     border-radius: 5px;
     padding: 3px;
     font-size: 1rem;
     font-family: 'Roboto';
     cursor: pointer; 
+    outline: none;
 }
 
-input:invalid {
+/* Style only when the user has interacted with the field */
+.form-group2 input:focus:invalid {
     border: 2px solid red;
 }
 
-input:valid {
+.form-group2 input:focus:valid {
     border: 2px solid blue;
 }
+
 .form-columns {
     display: flex; 
     gap: 30px; 
@@ -130,7 +129,7 @@ input:valid {
     flex-direction: column; 
 }
 
- /* Styling for the submit button */
+ /* Style for the submit button */
  .form-group3 [type="submit"] {
     padding: 12px 20px; 
     margin-top: 20px; 
@@ -145,9 +144,9 @@ input:valid {
     font-family: 'Roboto';
  }
 
- /* Styling the p in form-group3 */
+ /* Style the p in form-group3 */
  .form-group3 p {
-    z-index: 5;
+    /* z-index: 5; */
     color: rgb(15, 1, 1);
     font-size: 1.2rem;
     padding: 10px;
@@ -164,25 +163,25 @@ input:valid {
  /* Stacks columns vertically and expands the form witdth to fit smaller screens */
  @media (max-width: 640px) {
     .form-columns {
-        flex-direction: column; /* Stack the columns on smaller screens */
-        gap: 10px; /* Reduce spacing */
+        flex-direction: column; 
+        gap: 10px; 
     }
 
     .form-column {
-        flex: 1 1 100%; /* Each column takes full width */
+        flex: 1 1 100%; 
     }
 
     .form-colum2 {
-        width: 100vw; /* Ensure the form container spans the full screen */
-        padding: 20px; /* Adjust padding for smaller screens */
+        width: 100vw; 
+        padding: 20px; 
     }
 
     .sign-up-form {
-        width: 100%; /* Make sure the form takes full width */
+        width: 100%; 
         padding: 15px;
     }
 
     input {
-        width: 100%; /* Ensure inputs stretch across the screen */
+        width: 100%; 
     }
 }
